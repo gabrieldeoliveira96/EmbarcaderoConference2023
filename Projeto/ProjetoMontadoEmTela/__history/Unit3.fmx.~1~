@@ -1,0 +1,59 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 83
+  ClientWidth = 296
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF0037B0
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFF3861FC
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 13.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 20.000000000000000000
+    YRadius = 20.000000000000000000
+    OnClick = Rectangle1Click
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = [Family]
+      Locked = True
+      Size.Width = 217.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Aperte Aqui'
+      TabOrder = 0
+    end
+    object AniIndicator1: TAniIndicator
+      Align = Client
+      Margins.Top = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+  end
+end

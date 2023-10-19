@@ -1,0 +1,99 @@
+unit Unit3;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.StdCtrls, FMX.Effects, FMX.Filter.Effects;
+
+type
+  TForm3 = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    LRectangle:TRectangle;
+    LLabel:Tlabel;
+    LAniIndicator:TAniIndicator;
+    LFillRGBEffect:TFillRGBEffect;
+    procedure OnClick(Sender: TObject);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+
+  LRectangle:= TRectangle.Create(self);
+  LRectangle.Width:= 250;
+  LRectangle.Height:= 50;
+  LRectangle.Fill.Kind:= TBrushKind.Gradient;
+  LRectangle.Fill.Gradient.Color:= $FF0649F9;
+  LRectangle.Fill.Gradient.Color1:= $FF3280FF;
+  LRectangle.Stroke.Kind:= TBrushKind.None;
+  LRectangle.XRadius:= 15;
+  LRectangle.YRadius:= 15;
+  LRectangle.OnClick:= OnClick;
+
+  LLabel:= TLabel.Create(self);
+  LLabel.Text:= 'Aperte Aqui';
+  LLabel.Align:= TAlignLayout.Client;
+  LLabel.TextSettings.HorzAlign:= TTextAlign.Center;
+  LLabel.TextSettings.Font.Size:= 16;
+  LLabel.TextSettings.Font.Style:= [TFontStyle.fsBold];
+  LLabel.StyledSettings:= [TStyledSetting.Family];
+  LLabel.TextSettings.FontColor:= TAlphaColors.White;
+  LLabel.SetSubComponent(true);
+
+  LRectangle.AddObject(LLabel);
+
+  LAniIndicator:= TAniIndicator.Create(self);
+  LAniIndicator.Align:= TAlignLayout.Client;
+  LAniIndicator.Margins.Top:= 10;
+  LAniIndicator.Margins.Bottom:= 10;
+  LAniIndicator.SetSubComponent(true);
+  LAniIndicator.Visible:= false;
+
+  LRectangle.AddObject(LAniIndicator);
+
+
+  LFillRGBEffect:= TFillRGBEffect.Create(self);
+  LFillRGBEffect.Color:= TAlphaColors.White;
+  LFillRGBEffect.SetSubComponent(true);
+
+  LAniIndicator.AddObject(LFillRGBEffect);
+
+
+  self.AddObject(LRectangle);
+
+
+end;
+
+procedure TForm3.OnClick(Sender:TObject);
+begin
+  Label1.Visible:= false;
+  AniIndicator1.Visible:= true;
+  AniIndicator1.Enabled:= true;
+  TThread.CreateAnonymousThread(
+  procedure
+  begin
+    sleep(3000);
+    Tthread.Synchronize(nil,
+    procedure
+    begin
+      Label1.Visible:= true;
+      AniIndicator1.Visible:= false;
+    end);
+  end).Start;
+
+end;
+
+
+end.

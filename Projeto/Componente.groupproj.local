@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/10/03 23:50:44.000.937,C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\ProjectGroup1.groupproj=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
+    <Transaction>2023/10/19 10:24:19.632,C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\Projeto\Componente.groupproj=C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\Projeto\ProjectGroup1.groupproj</Transaction>
+  </Transactions>
+	<Default.Personality>
+		<Projects ActiveProject="C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\Projeto\ProjetoDemoUsandoComponente\Teste.dproj"/>
+	</Default.Personality>
+</BorlandProject>

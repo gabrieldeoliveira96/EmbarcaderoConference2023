@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/30 15:00:44.000.315,=rtl.dcp</Transaction>
+    <Transaction>2023/09/30 15:00:52.000.390,=C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\teste\Component1.pas</Transaction>
+    <Transaction>2023/10/03 00:21:12.000.869,=rtl.dcp</Transaction>
+    <Transaction>2023/10/03 00:21:30.000.313,=fmx.dcp</Transaction>
+    <Transaction>2023/10/03 00:21:30.000.243,=C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\demo\BotaoComponente\src\Rectangle1.pas</Transaction>
+    <Transaction>2023/10/03 23:05:28.000.963,C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\demo\BotaoComponente\Botao.dproj=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Botao.dproj</Transaction>
+    <Transaction>2023/10/03 23:18:23.000.311,C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\demo\BotaoComponente\src\Rectangle1.pas=</Transaction>
+    <Transaction>2023/10/03 23:18:28.000.472,=C:\Gabriel\Desenvolvimento\EmbarcaderConference2023\demo\BotaoComponente\src\Rectangle1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

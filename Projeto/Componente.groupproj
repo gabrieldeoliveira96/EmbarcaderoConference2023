@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{63933D8A-B3CF-4312-AE3B-C7F8C8BAE1D4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Componente\Botao.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ProjetoCriandoComponenteEmRunTime\CricaoComponenteCodigo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ProjetoDemoUsandoComponente\Teste.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ProjetoMontadoEmTela\ProjetoMontado.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Botao">
+        <MSBuild Projects="Componente\Botao.dproj"/>
+    </Target>
+    <Target Name="Botao:Clean">
+        <MSBuild Projects="Componente\Botao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Botao:Make">
+        <MSBuild Projects="Componente\Botao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CricaoComponenteCodigo">
+        <MSBuild Projects="ProjetoCriandoComponenteEmRunTime\CricaoComponenteCodigo.dproj"/>
+    </Target>
+    <Target Name="CricaoComponenteCodigo:Clean">
+        <MSBuild Projects="ProjetoCriandoComponenteEmRunTime\CricaoComponenteCodigo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CricaoComponenteCodigo:Make">
+        <MSBuild Projects="ProjetoCriandoComponenteEmRunTime\CricaoComponenteCodigo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Teste">
+        <MSBuild Projects="ProjetoDemoUsandoComponente\Teste.dproj"/>
+    </Target>
+    <Target Name="Teste:Clean">
+        <MSBuild Projects="ProjetoDemoUsandoComponente\Teste.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Teste:Make">
+        <MSBuild Projects="ProjetoDemoUsandoComponente\Teste.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ProjetoMontado">
+        <MSBuild Projects="ProjetoMontadoEmTela\ProjetoMontado.dproj"/>
+    </Target>
+    <Target Name="ProjetoMontado:Clean">
+        <MSBuild Projects="ProjetoMontadoEmTela\ProjetoMontado.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjetoMontado:Make">
+        <MSBuild Projects="ProjetoMontadoEmTela\ProjetoMontado.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Botao;CricaoComponenteCodigo;Teste;ProjetoMontado"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Botao:Clean;CricaoComponenteCodigo:Clean;Teste:Clean;ProjetoMontado:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Botao:Make;CricaoComponenteCodigo:Make;Teste:Make;ProjetoMontado:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
